@@ -44,11 +44,11 @@ export class LoginComponent implements OnInit{
       verticalPosition:'bottom'
     })
   }
-
+  
   fakeLoading(){
     this.loading=true;
     setTimeout(() => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['/dashboard']);
     }, 1500);
   }
 }
