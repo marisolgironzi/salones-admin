@@ -5,12 +5,12 @@
         <form [formGroup]="form" action="" (ngSubmit)="ingresar()" *ngIf="!loading">
             <img src="./../../../assets/img/user.png" alt="img-user" class="img-user">
             <mat-form-field appearance="fill">
-                <mat-label class="ancho" type="text">Usuario</mat-label>
-                <input matInput autocomplete="off" formControlName="usuario">
+                <mat-label class="ancho">Usuario</mat-label>
+                <input matInput autocomplete="off" type="text" formControlName="usuario">
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label class="ancho" type="password" formControlName="password">Contraseña</mat-label>
-                <input matInput autocomplete="off">
+                <mat-label class="ancho">Contraseña</mat-label>
+                <input matInput autocomplete="off" type="password" formControlName="password">
             </mat-form-field>
             <button mat-raised-button color="primary" class="ancho button" type="submit" [disabled]="form.invalid">Ingresar</button>
         </form>
