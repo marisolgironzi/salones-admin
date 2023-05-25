@@ -10,10 +10,11 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='PUT'){
-        $sql="UPDATE eventos SET nombre_evento=:nombre_evento WHERE id_evento=:id";
+        $sql="UPDATE eventos SET nombre_evento=:nombre_evento, id_servicio=:id_servicio WHERE id_evento=:id";
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':nombre_evento', $_GET['nombre_evento']);
+        $stmt->bindValue(':id_servicio', $_GET['id_servicio']);
         $stmt->bindValue(':id', $_GET['id']);
         $stmt->execute();       
         header("HTTP/1.1 200 OK");

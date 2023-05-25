@@ -10,14 +10,14 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $sql="INSERT INTO adicionales (nombre_categoria, id_servicio) VALUES (:nombre_categoria, :id_servicio)";
+        $sql="INSERT INTO adicionales (nombre_adicional, id_servicio) VALUES (:nombre_adicional, :id_servicio)";
 
         $stmt=$pdo->prepare($sql);
-        $stmt->bindValue('nombre_categoria',$_POST['nombre_categoria']);
+        $stmt->bindValue('nombre_adicional',$_POST['nombre_adicional']);
         $stmt->bindValue('id_servicio',$_POST['id_servicio']);
         $stmt->execute();
 
-        $id_adicional=$pdo->lastIsertId();
+        $id_adicional=$pdo->lastInsertId();
 
         if($id_adicional){
             header("HTTP/1.1 200 OK");

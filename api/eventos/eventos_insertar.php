@@ -17,7 +17,7 @@
         $stmt->bindValue('id_servicio',$_POST['id_servicio']);
         $stmt->execute();
 
-        $id_evento=$pdo->lastIsertId();
+        $id_evento=$pdo->lastInsertId();
 
         if($id_evento){
             header("HTTP/1.1 200 OK");

@@ -10,12 +10,14 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='PUT'){
-        $sql="UPDATE adicionales SET nombre_adicional=:nombre_adicional, id_servicio=:id_servicio WHERE id_adicional=:id";
+        $sql="UPDATE usuarios SET nombre=:nombre, apellido=:apellido, usuario=:usuario, cont_usuario=:cont_usuario, id_categoria=:id_categoria WHERE id_usuario=:id";
 
         $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(':nombre_adicional', $_GET['nombre_adicional']);
-        $stmt->bindValue(':id_servicio', $_GET['id_servicio']);
-        $stmt->bindValue(':id', $_GET['id']);
+        $stmt->bindValue(':nombre', $_GET['nombre']);
+        $stmt->bindValue(':apellido', $_GET['apellido']);
+        $stmt->bindValue(':usuario', $_GET['usuario']);
+        $stmt->bindValue(':cont_usuario', $_GET['cont_usuario']);
+        $stmt->bindValue(':id_categoria', $_GET['id_categoria']);
         $stmt->execute();       
         header("HTTP/1.1 200 OK");
         exit;

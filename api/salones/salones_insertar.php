@@ -10,17 +10,20 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $sql="INSERT INTO categoria_usuario (nombre_categoria) VALUES (:nombre_categoria)";
+        $sql="INSERT INTO salones (nombre_salon, capacidad_desde, capacidad_hasta, id_servicio) VALUES (:nombre_salon, :capacidad_desde, :capacidad_hasta, :id_servicio)";
 
         $stmt=$pdo->prepare($sql);
-        $stmt->bindValue('nombre_categoria',$_POST['nombre_categoria']);
+        $stmt->bindValue('nombre_salon',$_POST['nombre_salon']);
+        $stmt->bindValue('capacidad_desde',$_POST['capacidad_desde']);
+        $stmt->bindValue('capacidad_hasta',$_POST['capacidad_hasta']);
+        $stmt->bindValue('id_servicio',$_POST['id_servicio']);
         $stmt->execute();
 
-        $id_categoria=$pdo->lastInsertId();
+        $id_salon=$pdo->lastInsertId();
 
-        if($id_categoria){
+        if($id_salon){
             header("HTTP/1.1 200 OK");
-            echo json_encode($id_categoria);
+            echo json_encode($id_salon);
         }
         exit;
     }

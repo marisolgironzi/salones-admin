@@ -10,17 +10,17 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $sql="INSERT INTO categoria_usuario (nombre_categoria) VALUES (:nombre_categoria)";
+        $sql="INSERT INTO servicios (nombre_servicio) VALUES (:nombre_servicio)";
 
         $stmt=$pdo->prepare($sql);
-        $stmt->bindValue('nombre_categoria',$_POST['nombre_categoria']);
+        $stmt->bindValue('nombre_servicio',$_POST['nombre_servicio']);
         $stmt->execute();
 
-        $id_categoria=$pdo->lastInsertId();
+        $id_servicio=$pdo->lastInsertId();
 
-        if($id_categoria){
+        if($id_servicio){
             header("HTTP/1.1 200 OK");
-            echo json_encode($id_categoria);
+            echo json_encode($id_servicio);
         }
         exit;
     }
