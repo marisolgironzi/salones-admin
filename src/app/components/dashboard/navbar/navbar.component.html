@@ -1,8 +1,13 @@
 <mat-toolbar color="primary">
     <span>Administrador</span>
     <span class="example-spacer"></span>
-    <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect" >{{item.nombre}}</button>
+    <!-- <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect" >{{item.nombre}}</button> -->
     <button mat-button routerLink="/dashboard/usuarios">Usuarios</button>
+    <button mat-button routerLink="/dashboard/usuarios">Salones</button>
+    <button mat-button routerLink="/dashboard/usuarios">Eventos</button>
+    <button mat-button routerLink="/dashboard/usuarios">Adicionales</button>
+    <button mat-button routerLink="/dashboard/usuarios">Clientes</button>
+    <button mat-button routerLink="/dashboard/usuarios">Reservas</button>
     <button mat-button routerLink="/dashboard/reportes">Reportes</button>
     <span class="example-spacer"></span>
     <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
