@@ -12,7 +12,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit{
   form: FormGroup;
-  loading=false;
 
   constructor (private fb:FormBuilder, private _snackBar:MatSnackBar, private router:Router) {
     this.form = this.fb.group({
@@ -29,8 +28,8 @@ export class LoginComponent implements OnInit{
     const usuario=this.form.value.usuario;
     const password=this.form.value.password;
 
-    if(usuario=="admin" && password=="admin123"){
-      this.router.navigate(['/dashboard'])
+    if(usuario=='admin' && password=='admin123'){
+      this.router.navigate(['/dashboard']);
     } else{
       this.error();
       this.form.reset();
