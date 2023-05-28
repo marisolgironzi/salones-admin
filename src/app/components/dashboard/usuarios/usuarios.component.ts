@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/interfaces/usuarios';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -22,7 +23,7 @@ export class UsuariosComponent implements OnInit{
 
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor (private _usuarioService:UsuarioService, private _snackBar:MatSnackBar)  {}
+  constructor (private _usuarioService:UsuarioService, private _snackBar:MatSnackBar, private router:Router)  {}
 
   ngOnInit(): void {
     this.cargarUsuario();
