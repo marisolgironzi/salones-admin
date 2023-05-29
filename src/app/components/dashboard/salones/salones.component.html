@@ -1,1 +1,65 @@
-<p>salones works!</p>
+<div class="container-fluid">
+    <mat-toolbar>
+        <span>Salones</span>
+        <div class="example-spacer"></div>
+        <button mat-raised-button routerLink="./crear-salon">Agregar</button>
+    </mat-toolbar>
+
+    <div *ngIf="listSalones.length>0">
+      <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ingrese para filtrar" #input autocomplete="off">
+      </mat-form-field>
+
+      <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+                        
+            <ng-container matColumnDef="idSalon">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Id de salón </th>
+              <td mat-cell *matCellDef="let element"> {{element.idSalon}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="capacidadDesde">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Capacidad desde </th>
+              <td mat-cell *matCellDef="let element"> {{element.capacidadDesde}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="capacidadHasta">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Capacidad hasta </th>
+              <td mat-cell *matCellDef="let element"> {{element.capacidadHasta}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef>  </th>
+              <td mat-cell *matCellDef="let element; let i=index" style="text-align: right"> 
+                <a href="" class="pointer" style="color:coral" matTooltip="Ver salón">
+                  <mat-icon> search </mat-icon>
+                </a>
+                <a href="" class="pointer" style="color:brown" matTooltip="Editar salón">
+                  <mat-icon> edit </mat-icon>
+                </a>
+                <a (click)="eliminarSalon(i)" class="pointer" style="color:crimson" matTooltip="Eliminar usuario">
+                  <mat-icon> delete </mat-icon>
+                </a>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+    </div>
+    
+    <h2 *ngIf="listSalones.length==0">No hay usuarios para mostrar</h2>
+
+</div>

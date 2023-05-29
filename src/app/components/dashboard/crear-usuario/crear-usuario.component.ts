@@ -12,24 +12,25 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class CrearUsuarioComponent {
 
-    sexo: any[] = ['Femenino', 'Masculino', 'No binario'];
     form: FormGroup;
 
     constructor (private fb: FormBuilder, private _usuarioService: UsuarioService, private router:Router, private _snackBar: MatSnackBar){
         this.form=this.fb.group({
-            usuario: ['', Validators.required],
+            idUsuario: ['', Validators.required],
             nombre: ['', Validators.required],
             apellido: ['', Validators.required],
-            sexo: ['', Validators.required],
+            usuario: ['', Validators.required],
+            idCategoria: ['', Validators.required],
         })
     }
 
     agregarUsuario(){
         const user:Usuario={
-            usuario:this.form.value.usuario,
+            idUsuario:this.form.value.idUsuario,
             nombre:this.form.value.nombre,
             apellido:this.form.value.apellido,
-            sexo:this.form.value.sexo
+            usuario:this.form.value.usuario,
+            idCategoria:this.form.value.idCategoria
         }
         this._usuarioService.agregarUsuario(user);
         this.router.navigate(['./usuarios']);
