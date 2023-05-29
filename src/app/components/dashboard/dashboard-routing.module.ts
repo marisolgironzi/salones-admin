@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { CrearUsuarioComponent } from "./crear-usuario/crear-usuario.component";
 import { NavbarComponent } from './navbar/navbar.component';
 import { SalonesComponent } from './salones/salones.component';
 import { EventosComponent } from './eventos/eventos.component';
@@ -17,7 +16,6 @@ export const routes: Routes = [
     {path:'', component: InicioComponent},
     {path: 'navbar', component: NavbarComponent},
     {path:'usuarios', component: UsuariosComponent},
-    {path:'crear-usuario', component: CrearUsuarioComponent},
     {path:'salones', component: SalonesComponent},
     {path:'eventos', component: EventosComponent},
     {path:'adicionales', component: AdicionalesComponent},

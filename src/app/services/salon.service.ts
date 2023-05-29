@@ -18,7 +18,4 @@ export class SalonService {
     this.listSalones.splice(index, 1);
   }
 
-  agregarSalon(salon:Salon){
-    this.listSalones.unshift(salon);
-  }
 }

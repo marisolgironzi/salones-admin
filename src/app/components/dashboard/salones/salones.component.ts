@@ -15,7 +15,7 @@ import { SalonService } from 'src/app/services/salon.service';
 export class SalonesComponent {
   listSalones: Salon[] = [];  
   
-  displayedColumns: string[] = ['idUsuario', 'nombre', 'apellido', 'usuario', 'idCategoria', 'acciones'];
+  displayedColumns: string[] = ['idSalon', 'nombre', 'capacidadDdesde', 'capacidadHasta', 'acciones'];
   dataSource! : MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

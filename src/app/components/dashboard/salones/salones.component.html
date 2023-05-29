@@ -2,7 +2,6 @@
     <mat-toolbar>
         <span>Salones</span>
         <div class="example-spacer"></div>
-        <button mat-raised-button routerLink="./crear-salon">Agregar</button>
     </mat-toolbar>
 
     <div *ngIf="listSalones.length>0">
@@ -60,6 +59,6 @@
       </div>
     </div>
     
-    <h2 *ngIf="listSalones.length==0">No hay usuarios para mostrar</h2>
+    <h2 *ngIf="listSalones.length==0">No hay salones para mostrar</h2>
 
 </div>
