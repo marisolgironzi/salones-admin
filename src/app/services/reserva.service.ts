@@ -6,7 +6,7 @@ import { Reserva } from '../interfaces/reservas';
 })
 export class ReservaService {
   listReservas: Reserva[] = [
-    {idReserva: 1 , idCliente: 1, idSalon: 1, idEvento: 1, idAdicional: 1, mes: 'mayo', anio: 2023, detalles: '100 personas'}
+    {id_reserva: 1 , idCliente_reserva: 1, idSalon_reserva: 1, mes_reserva: 'mayo', anio_reserva: 2023}
   ];
   constructor() { }
 

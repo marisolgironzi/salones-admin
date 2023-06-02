@@ -3,15 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo:'login'},
   {path: 'login', component: LoginComponent, pathMatch: 'full'},
-
-  {path: 'dashboard', loadChildren: () => import(
-    './components/dashboard/dashboard.module')
-    .then(x => x.DashboardModule)},
-  
+  {path: 'dashboard', component: DashboardComponent, pathMatch:'full'},
   {path: '**', redirectTo: 'login', pathMatch:'full'},
 ];
 

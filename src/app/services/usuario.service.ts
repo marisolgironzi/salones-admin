@@ -6,7 +6,7 @@ import { Usuario } from '../interfaces/usuarios';
 })
 export class UsuarioService {
   listUsuarios: Usuario[] = [
-    {idUsuario: 1, nombre: "Marisol", apellido: "Gironzi", usuario: "gironziadmin", idCategoria: 1}
+    {id_usuario: 1, nombre_usuario: "Marisol", apellido_usuario: "Gironzi", usuario_usuario: "gironziadmin", idCategoria_usuario: 1}
   ];
   constructor() { }
 

@@ -1,7 +1,7 @@
 export interface Usuario {
-    idUsuario: number;
-    nombre: string;
-    apellido: string;
-    usuario: string;
-    idCategoria: number;
+    id_usuario: number;
+    nombre_usuario: string;
+    apellido_usuario: string;
+    usuario_usuario: string;
+    idCategoria_usuario: number;
 }

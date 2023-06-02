@@ -6,7 +6,7 @@ import { Salon } from '../interfaces/salones';
 })
 export class SalonService {
   listSalones: Salon[] = [
-    {idSalon: 1, nombre: "Agata", capacidadDesde: 20, capacidadHasta: 50}
+    {id_salon: 1, nombre_salon: "Agata", capacidadDesde_salon: 20, capacidadHasta_salon: 50}
   ];
   constructor() { }
 

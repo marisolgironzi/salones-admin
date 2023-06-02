@@ -1,7 +1,7 @@
 export interface Cliente {
-    idCliente: number;
-    nombre: string;
-    apellido: string;
-    mail: string;
-    telefono: string
+    id_cliente: number;
+    nombre_cliente: string;
+    apellido_cliente: string;
+    mail_cliente: string;
+    telefono_cliente: string
 }

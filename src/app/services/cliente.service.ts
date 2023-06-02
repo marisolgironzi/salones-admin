@@ -6,7 +6,7 @@ import { Cliente } from '../interfaces/clientes';
 })
 export class ClienteService {
 listClientes: Cliente[] = [
-    {idCliente: 1, nombre: 'Juan', apellido: 'Sánchez', mail: 'juansanchez@gmail.com', telefono: '011 15 666 777'}
+    {id_cliente: 1, nombre_cliente: 'Juan', apellido_cliente: 'Sánchez', mail_cliente: 'juansanchez@gmail.com', telefono_cliente: '011 15 666 777'}
   ];
   constructor() { }
 

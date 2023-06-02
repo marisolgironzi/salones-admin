@@ -1,6 +1,6 @@
 export interface Salon {
-    idSalon: number;
-    nombre: string;
-    capacidadDesde: number;
-    capacidadHasta: number
+    id_salon: number;
+    nombre_salon: string;
+    capacidadDesde_salon: number;
+    capacidadHasta_salon: number
 }
