@@ -28,12 +28,20 @@ import { MatSelectModule } from '@angular/material/select';
 //Componentes
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { SalonesComponent } from './components/salones/salones.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    UsuariosComponent,
+    SalonesComponent,
+    ClientesComponent,
+    ReservasComponent
   ],
   imports: [
     CommonModule,
@@ -55,7 +63,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   exports: [
     BrowserModule,
