@@ -25,7 +25,7 @@ export class UsuarioService {
     return this.conexionservicio.get(this.API+"?borrarUsuario="+id_usuario);
   }
 
-  modificarUsuario(id_usuario:any, datosUsuario:any):Observable<any>{
+  modificarUsuario(id_usuario:any, datosUsuario:Usuario):Observable<any>{
     return this.conexionservicio.post(this.API+"?modificarUsuario="+id_usuario,datosUsuario);
   }
 
