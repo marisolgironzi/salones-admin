@@ -27,7 +27,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { SalonesComponent } from './components/salones/salones.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
@@ -37,11 +36,10 @@ import { ReservasComponent } from './components/reservas/reservas.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent,
     UsuariosComponent,
     SalonesComponent,
     ClientesComponent,
-    ReservasComponent
+    ReservasComponent,
   ],
   imports: [
     CommonModule,

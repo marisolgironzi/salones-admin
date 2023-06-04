@@ -1,12 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    /*fondos*/
+    --fondo-oscuro-1: rgb(179, 24, 55);
+    --fondo-oscuro-2: rgb(31, 29, 29);
+    --fondo-claro-1: rgb(255, 192, 156);
+    --fondo-claro-2: rgb(246, 246, 246);
+
+    /*fuentes*/
+    --fuente-oscura-1: rgb(15, 15, 15);
+    --fuente-oscura-2: rgb(75, 18, 28);
+    --fuente-clara-1: rgb(255, 192, 156);
+    --fuente-clara-2: rgb(246, 246, 246);
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
 
 .container {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top:5px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .example-spacer {
