@@ -1,0 +1,5 @@
+@import url(./../../../styles.css);
+
+.container-fluid{
+    background-color: var(--fondo-oscuro-1);
+}

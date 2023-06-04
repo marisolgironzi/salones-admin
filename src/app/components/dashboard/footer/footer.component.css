@@ -49,9 +49,9 @@
     -webkit-overflow-scrolling: touch;
   }
 
-@import url(./../../styles.css);
+@import url(./../../../../styles.css);
 
 #contFooter{
-  color: beige;
-  background-color: var(--fondo-color);
+  color: var(--fuente-clara-1);
+  background-color: var(--fondo-oscuro-1);
 }

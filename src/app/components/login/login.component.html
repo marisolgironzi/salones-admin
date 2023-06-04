@@ -1,17 +1,17 @@
 <div class="body">
-    <div class="login">
-
         <form [formGroup]="form" (ngSubmit)="ingresar()">
-            <img src="./../../../assets/img/user.png" alt="img-user" class="img-user">
-            <mat-form-field appearance="fill">
-                <mat-label class="ancho">Usuario</mat-label>
-                <input matInput autocomplete="off" type="text" formControlName="usuario">
+            <img src="./../../../assets/img/user.png" alt="img-user" class="img-user item">
+            <br><br>
+            <h4 style="color: rgb(75, 18, 28);"><strong>Iniciar sesión</strong></h4>
+            <br>
+            <mat-form-field>
+                <input matInput autocomplete="off" type="text" formControlName="usuario" placeholder="Ingrese su usuario">
             </mat-form-field>
-            <mat-form-field appearance="fill">
-                <mat-label class="ancho">Contraseña</mat-label>
-                <input matInput autocomplete="off" type="password" formControlName="password">
+            <br>
+            <mat-form-field>
+                <input matInput autocomplete="off" type="password" formControlName="password" placeholder="Ingrese su contraseña">
             </mat-form-field>
-            <button mat-raised-button color="primary" class="ancho button" [disabled]="form.invalid">Ingresar</button>
+            <br>
+            <button mat-raised-button style="color: rgb(75, 18, 28);" class="button" [disabled]="form.invalid">Ingresar</button>
         </form>
-    </div>
 </div>

@@ -35,6 +35,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/dashboard/header/header.component';
 import { FooterComponent } from './components/dashboard/footer/footer.component';
 import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
+import { ListarUsuariosComponent } from './components/dashboard/moduloUsuarios/listar-usuarios/listar-usuarios.component';
+import { AgregarUsuarioComponent } from './components/dashboard/moduloUsuarios/agregar-usuario/agregar-usuario.component';
+import { ModificarUsuarioComponent } from './components/dashboard/moduloUsuarios/modificar-usuario/modificar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { SidebarComponent } from './components/dashboard/sidebar/sidebar.compone
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    ListarUsuariosComponent,
+    AgregarUsuarioComponent,
+    ModificarUsuarioComponent
   ],
   imports: [
     CommonModule,
