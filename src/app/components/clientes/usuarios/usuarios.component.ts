@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Usuario } from '../../interfaces/usuarios';
+import { Usuario } from '../../../interfaces/usuarios';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { UsuarioService } from '../../services/usuario.service';
+import { UsuarioService } from '../../../services/usuario.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 

@@ -27,10 +27,14 @@ import { MatSelectModule } from '@angular/material/select';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { UsuariosComponent } from './components/clientes/usuarios/usuarios.component';
 import { SalonesComponent } from './components/salones/salones.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { ReservasComponent } from './components/reservas/reservas.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/dashboard/header/header.component';
+import { FooterComponent } from './components/dashboard/footer/footer.component';
+import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { ReservasComponent } from './components/reservas/reservas.component';
     SalonesComponent,
     ClientesComponent,
     ReservasComponent,
+    DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
