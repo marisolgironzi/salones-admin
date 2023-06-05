@@ -19,12 +19,15 @@ const routes: Routes = [
   
   /* {path: 'listarSalones', component:},
   {path: 'agregarSalon', component: },
+  {path: 'modificarSalon', component: },
   
   {path: 'listarClientes', component: },
   {path: 'agregarCliente', component: },
+  {path: 'modificarCliente', component: },
   
   {path: 'listarReservas', component: },
   {path: 'agregarReserva', component: },
+  {path: 'modificarReserva', component: }
   */ 
   {path: '**', redirectTo: 'dashboard', pathMatch:'full'},
 ];

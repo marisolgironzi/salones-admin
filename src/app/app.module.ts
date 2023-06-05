@@ -27,10 +27,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { UsuariosComponent } from './components/clientes/usuarios/usuarios.component';
-import { SalonesComponent } from './components/salones/salones.component';
-import { ClientesComponent } from './components/clientes/clientes.component';
-import { ReservasComponent } from './components/reservas/reservas.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/dashboard/header/header.component';
 import { FooterComponent } from './components/dashboard/footer/footer.component';
@@ -43,10 +39,6 @@ import { ModificarUsuarioComponent } from './components/dashboard/moduloUsuarios
   declarations: [
     AppComponent,
     LoginComponent,
-    UsuariosComponent,
-    SalonesComponent,
-    ClientesComponent,
-    ReservasComponent,
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
