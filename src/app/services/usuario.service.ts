@@ -14,7 +14,7 @@ export class UsuarioService {
   ) {}
 
   listarUsuarios(){
-    return this.conexionservicio.get(this.API);
+    return this.conexionservicio.get(this.API+"?listarUsuarios=");
   }
 
   agregarEmpleado(datosUsuario:Usuario):Observable<any>{
