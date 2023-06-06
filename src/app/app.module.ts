@@ -27,19 +27,17 @@ import { MatSelectModule } from '@angular/material/select';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeaderComponent } from './components/dashboard/header/header.component';
-import { FooterComponent } from './components/dashboard/footer/footer.component';
-import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ListarUsuariosComponent } from './components/dashboard/moduloUsuarios/listar-usuarios/listar-usuarios.component';
 import { AgregarUsuarioComponent } from './components/dashboard/moduloUsuarios/agregar-usuario/agregar-usuario.component';
 import { ModificarUsuarioComponent } from './components/dashboard/moduloUsuarios/modificar-usuario/modificar-usuario.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
