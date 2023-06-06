@@ -49,7 +49,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-@import url(./../../../../styles.css);
+@import url(./../../../styles.css);
 
 #contFooter{
   color: var(--fuente-clara-1);
