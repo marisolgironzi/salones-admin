@@ -7,7 +7,7 @@ import { Usuario } from '../interfaces/usuarios';
   providedIn: 'root'
 })
 export class UsuarioService {
-  API: string='https://github.com/marisolgironzi/salones-api';
+  API: string='localhost/apiSalones/';
 
   constructor(
     private conexionservicio:HttpClient
@@ -17,7 +17,7 @@ export class UsuarioService {
     return this.conexionservicio.get(this.API+"?listarUsuarios=");
   }
 
-  agregarEmpleado(datosUsuario:Usuario):Observable<any>{
+  agregarUsuario(datosUsuario:Usuario):Observable<any>{
     return this.conexionservicio.post(this.API+"?insertarUsuario=1",datosUsuario);
   }
 

@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
     const password=this.form.value.password;
 
     if(usuario=='admin' && password=='admin123'){
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/listarUsuarios']);
     } else{
       this.error();
       this.form.reset();

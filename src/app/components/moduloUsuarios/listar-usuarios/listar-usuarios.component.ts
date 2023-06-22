@@ -16,15 +16,11 @@ export class ListarUsuariosComponent{
 
   ngOnInit(): void {
     this.servicio.listarUsuarios().subscribe(respuesta=>{
-      console.log(respuesta);
       this.usuarios=respuesta;
     });
   }
 
   borrarRegistroUsuario(id_usuario:any, iControl:any){
-    console.log(id_usuario);
-    console.log(iControl);
-
     if(window.confirm("¿Confirma que desea borrar este usuario?")){
       this.servicio.borrarUsuario(id_usuario).subscribe(
         (respuesta)=>{

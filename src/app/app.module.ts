@@ -27,12 +27,21 @@ import { MatSelectModule } from '@angular/material/select';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
-import { ListarUsuariosComponent } from './components/dashboard/moduloUsuarios/listar-usuarios/listar-usuarios.component';
-import { AgregarUsuarioComponent } from './components/dashboard/moduloUsuarios/agregar-usuario/agregar-usuario.component';
-import { ModificarUsuarioComponent } from './components/dashboard/moduloUsuarios/modificar-usuario/modificar-usuario.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ListarUsuariosComponent } from './components/moduloUsuarios/listar-usuarios/listar-usuarios.component';
+import { AgregarUsuarioComponent } from './components/moduloUsuarios/agregar-usuario/agregar-usuario.component';
+import { ModificarUsuarioComponent } from './components/moduloUsuarios/modificar-usuario/modificar-usuario.component';
+import { ModificarSalonComponent } from './components/moduloSalones/modificar-salon/modificar-salon.component';
+import { AgregarSalonComponent } from './components/moduloSalones/agregar-salon/agregar-salon.component';
+import { ListarSalonesComponent } from './components/moduloSalones/listar-salones/listar-salones.component';
+import { ListarReservasComponent } from './components/moduloReservas/listar-reservas/listar-reservas.component';
+import { AgregarReservaComponent } from './components/moduloReservas/agregar-reserva/agregar-reserva.component';
+import { ModificarReservaComponent } from './components/moduloReservas/modificar-reserva/modificar-reserva.component';
+import { AgregarClienteComponent } from './components/moduloClientes/agregar-cliente/agregar-cliente.component';
+import { ModificarClienteComponent } from './components/moduloClientes/modificar-cliente/modificar-cliente.component';
+import { ListarClientesComponent } from './components/moduloClientes/listar-clientes/listar-clientes.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +52,16 @@ import { FooterComponent } from './components/footer/footer.component';
     SidebarComponent,
     ListarUsuariosComponent,
     AgregarUsuarioComponent,
-    ModificarUsuarioComponent
+    ModificarUsuarioComponent,
+    ModificarSalonComponent,
+    AgregarSalonComponent,
+    ListarSalonesComponent,
+    ListarReservasComponent,
+    AgregarReservaComponent,
+    ModificarReservaComponent,
+    AgregarClienteComponent,
+    ModificarClienteComponent,
+    ListarClientesComponent,
   ],
   imports: [
     CommonModule,

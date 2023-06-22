@@ -1,29 +1,40 @@
-<div class="container-fluid">
-    <div class="row" id="tablaUsuarios">
-        <div class="table-responsive">
-            <h4> Listado de usuario </h4>
-            <table class="table table-primary">
-                <thead>
-                    <tr>
-                        <th scope="col">Id de Usuario</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Id de categoría</th>
-                        <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let usuario of usuarios;let iControl=index">
-                        <td scope="row">{{ usuario.id_usuario }}</td>
-                        <td>{{ usuario.nombre_usuario }}</td>
-                        <td>{{ usuario.apellido_usuario}}</td>
-                        <td>{{ usuario.categoria_usuario}}</td>
-                        <td><a class="btn btn-primary" routerLink="/modificarUsuario/{{ usuario.id_usuario }}" role="button">Editar</a>
-                            <a class="btn btn-danger" (click)="borrarRegistroUsuario(usuario.id_usuario, iControl)" role="button">Borrar</a></td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+            <div class="row" id="tablaUsuarios">
+                <div class="table-responsive">
+                    <h4> Listado de usuario </h4>
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id de Usuario</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let usuario of usuarios;let iControl=index">
+                                <td scope="row">{{ usuario.id_usuario }}</td>
+                                <td>{{ usuario.nombre }}</td>
+                                <td>{{ usuario.apellido}}</td>
+                                <td>{{ usuario.usuario}}</td>
+                                <td>{{ usuario.contrasenia}}</td>
+                                <td>{{ usuario.categoria}}</td>
+                                <td><a class="btn btn-primary" routerLink="/modificarUsuario/{{ usuario.id_usuario }}" role="button">Editar</a>
+                                    <a class="btn btn-danger" (click)="borrarRegistroUsuario(usuario.id_usuario, iControl)" role="button">Borrar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+            </div>
         </div>
-    
     </div>
 </div>

@@ -1,21 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Salon } from '../interfaces/salones';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SalonService {
-  listSalones: Salon[] = [
-    {id_salon: 1, nombre_salon: "Agata", capacidadDesde_salon: 20, capacidadHasta_salon: 50}
-  ];
-  constructor() { }
+  API: string='localhost/apiSalones/';
 
-  getSalon(){
-    return this.listSalones.slice();
+  constructor(
+    private conexionservicio:HttpClient
+  ) {}
+
+  listarSalones(){
+    return this.conexionservicio.get(this.API+"?listarSalones=");
   }
 
-  eliminarSalon(index:number){
-    this.listSalones.splice(index, 1);
+  agregarSalon(datosSalon:Salon):Observable<any>{
+    return this.conexionservicio.post(this.API+"?insertarSalon=1",datosSalon);
   }
 
+  borrarSalon(id_salon:any):Observable<any>{
+    return this.conexionservicio.get(this.API+"?borrarSalon="+id_salon);
+  }
+
+  modificarSalon(id_salon:any, datosSalon:Salon):Observable<any>{
+    return this.conexionservicio.post(this.API+"?modificarSalon="+id_salon,datosSalon);
+  }
+
+  obtenerSalonporId(id_salon:any){
+    return this.conexionservicio.get(this.API+"?consultarSalonporId="+id_salon);
+  }
 }

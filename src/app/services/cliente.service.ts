@@ -1,21 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from '../interfaces/clientes';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
-listClientes: Cliente[] = [
-    {id_cliente: 1, nombre_cliente: 'Juan', apellido_cliente: 'Sánchez', mail_cliente: 'juansanchez@gmail.com', telefono_cliente: '011 15 666 777'}
-  ];
-  constructor() { }
+  API: string='localhost/apiSalones/';
 
-  getCliente(){
-    return this.listClientes.slice();
+  constructor(
+    private conexionservicio:HttpClient
+  ) {}
+
+  listarClientes(){
+    return this.conexionservicio.get(this.API+"?listarClientes=");
   }
 
-  eliminarCliente(index:number){
-    this.listClientes.splice(index, 1);
+  agregarCliente(datosCliente:Cliente):Observable<any>{
+    return this.conexionservicio.post(this.API+"?insertarCliente=1",datosCliente);
+  }
+
+  borrarCliente(id_cliente:any):Observable<any>{
+    return this.conexionservicio.get(this.API+"?borrarCliente="+id_cliente);
+  }
+
+  modificarCliente(id_cliente:any, datosCliente:Cliente):Observable<any>{
+    return this.conexionservicio.post(this.API+"?modificarCliente="+id_cliente,datosCliente);
+  }
+
+  obtenerClienteporId(id_cliente:any){
+    return this.conexionservicio.get(this.API+"?consultarClienteporId="+id_cliente);
   }
 
 }

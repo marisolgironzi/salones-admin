@@ -1,22 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Reserva } from '../interfaces/reservas';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReservaService {
-  listReservas: Reserva[] = [
-    {id_reserva: 1 , idCliente_reserva: 1, idSalon_reserva: 1, mes_reserva: 'mayo', anio_reserva: 2023}
-  ];
-  constructor() { }
+  API: string='localhost/apiSalones/';
 
-  getReserva(){
-    return this.listReservas.slice();
+  constructor(
+    private conexionservicio:HttpClient
+  ) {}
+
+  listarReservas(){
+    return this.conexionservicio.get(this.API+"?listarReservas=");
   }
 
-  eliminarReserva(index:number){
-    this.listReservas.splice(index, 1);
+  agregarReserva(datosReserva:Reserva):Observable<any>{
+    return this.conexionservicio.post(this.API+"?insertarReserva=1",datosReserva);
   }
 
+  borrarReserva(id_reserva:any):Observable<any>{
+    return this.conexionservicio.get(this.API+"?borrarReserva="+id_reserva);
+  }
+
+  modificarReserva(id_reserva:any, datosReserva:Reserva):Observable<any>{
+    return this.conexionservicio.post(this.API+"?modificarReserva="+id_reserva,datosReserva);
+  }
+
+  obtenerReservaporId(id_reserva:any){
+    return this.conexionservicio.get(this.API+"?consultarReservaporId="+id_reserva);
+  }
 }
 

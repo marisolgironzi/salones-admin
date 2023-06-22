@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 //Componentes
 import { LoginComponent } from './components/login/login.component';
-import { ListarUsuariosComponent } from './components/dashboard/moduloUsuarios/listar-usuarios/listar-usuarios.component';
-import { AgregarUsuarioComponent } from './components/dashboard/moduloUsuarios/agregar-usuario/agregar-usuario.component';
-import { ModificarUsuarioComponent } from './components/dashboard/moduloUsuarios/modificar-usuario/modificar-usuario.component';
+import { ListarUsuariosComponent } from './components/moduloUsuarios/listar-usuarios/listar-usuarios.component';
+import { AgregarUsuarioComponent } from './components/moduloUsuarios/agregar-usuario/agregar-usuario.component';
+import { ModificarUsuarioComponent } from './components/moduloUsuarios/modificar-usuario/modificar-usuario.component';
+
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo:'login'},
-  {path: 'login', component: LoginComponent, pathMatch: 'full'},
-
+  {path: 'login', component: LoginComponent},
 
   {path: 'listarUsuarios', component: ListarUsuariosComponent},
   {path: 'agregarUsuario', component: AgregarUsuarioComponent},
