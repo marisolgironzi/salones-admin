@@ -3,4 +3,5 @@ export interface Reserva {
     nombre_salon: String;
     mes: String;
     anio: number;
+    detalles: String;
 }

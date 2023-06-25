@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -10,11 +10,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   templateUrl: './agregar-usuario.component.html',
   styleUrls: ['./agregar-usuario.component.css']
 })
-export class AgregarUsuarioComponent {
+export class AgregarUsuarioComponent implements OnInit{
 
   formAgregarUsuario: FormGroup;
 
-  constructor (private fb:FormBuilder, private _snackBar:MatSnackBar, private router:Router, private usuarioService: UsuarioService) {
+  constructor (private fb:FormBuilder, private router:Router, private usuarioService: UsuarioService) {
     this.formAgregarUsuario = this.fb.group({
       nombre:['', Validators.required],
       apellido:['',Validators.required],

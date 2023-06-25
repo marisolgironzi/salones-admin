@@ -1,1 +1,35 @@
-<p>agregar-salon works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+            <div class="row" id="formulario">
+                <form [formGroup]="formAgregarSalon">
+                    <h4> Agregar salón </h4>
+                    <hr>
+
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre_salon">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Capacidad desde</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="capacidad_desde">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Capacidad hasta</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="capacidad_hasta">
+                    </div>
+            
+                    <hr>
+
+                    <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar salón" (click)="guardarSalon()"> 
+                    &nbsp;
+                    <a class="btn btn-primary" routerLink="/listarSalones" id="btnCancelar" role="button">Cancelar</a>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

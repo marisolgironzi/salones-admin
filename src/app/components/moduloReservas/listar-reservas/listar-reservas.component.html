@@ -1,1 +1,42 @@
-<p>listar-reservas works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+            <div class="row" id="tablaReservas">
+                <div class="table-responsive">
+                    <h4> Listado de reservas </h4>
+                    <hr>
+                    
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id de reserva</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Salón</th>
+                                <th scope="col">Mes</th>
+                                <th scope="col">Año</th>
+                                <th scope="col">Detalles</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let reserva of reservas;let iControl=index">
+                                <td scope="row">{{ reserva.id_reserva }}</td>
+                                <td>{{ reserva.nombre }}</td>
+                                <td>{{ reserva.nombre_salon }}</td>
+                                <td>{{ reserva.mes }}</td>
+                                <td>{{ reserva.anio }}</td>
+                                <td>{{ reserva.detalles }}</td>
+                                <td><a class="btn modificar" routerLink="/modificarReserva/{{ reserva.id_reserva }}" role="button">Editar</a>
+                                    <a class="btn borrar" (click)="borrarRegistroReserva(reserva.id_reserva, iControl)" role="button">Borrar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

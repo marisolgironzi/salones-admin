@@ -1,1 +1,42 @@
-<p>modificar-salon works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+        
+            <div class="row" id="formulario" *ngIf="salonRegistroOriginal">
+                <form novalidate [formGroup]="formEditarSalon" (ngSubmit)="onGuardarModificacion()">
+                    <h4> Modificar salón </h4>
+                    <hr>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre_salon">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Capacidad desde</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="capacidad_desde">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Capacidad hasta</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="capacidad_hasta">
+                    </div>
+            
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar modificación de salón"> 
+                        </div>
+                        <div class="col-2">
+                            <a class="btn btn-primary" routerLink="/listarSalones" id="btnCancelar" role="button">Cancelar</a>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

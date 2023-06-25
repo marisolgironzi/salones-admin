@@ -1,1 +1,38 @@
-<p>listar-salones works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+            <div class="row" id="tablaSalones">
+                <div class="table-responsive">
+                    <h4> Listado de salones </h4>
+                    <hr>
+                    
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id de salón</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Capacidad desde</th>
+                                <th scope="col">Capacidad hasta</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let salon of salones;let iControl=index">
+                                <td scope="row">{{ salon.id_salon }}</td>
+                                <td>{{ salon.nombre_salon }}</td>
+                                <td>{{ salon.capacidad_desde }}</td>
+                                <td>{{ salon.capacidad_hasta }}</td>
+                                <td><a class="btn modificar" routerLink="/modificarSalon/{{ salon.id_salon }}" role="button">Editar</a>
+                                    <a class="btn borrar" (click)="borrarRegistroSalon(salon.id_salon, iControl)" role="button">Borrar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

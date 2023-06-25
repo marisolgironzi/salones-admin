@@ -1,1 +1,43 @@
-<p>agregar-reserva works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+            <div class="row" id="formulario">
+                <form [formGroup]="formAgregarReserva">
+                    <h4> Agregar reserva </h4>
+                    <hr>
+
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Cliente</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Salón</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre_salon">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Mes</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="mes">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Año</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="anio">
+                    </div>
+                    <div class="input-group mb-3" id="campo">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Detalles</span>
+                        <input required type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="detalles">
+                    </div>
+            
+                    <hr>
+
+                    <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar reserva" (click)="guardarReserva()"> 
+                    &nbsp;
+                    <a class="btn btn-primary" routerLink="/listarReservas" id="btnCancelar" role="button">Cancelar</a>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

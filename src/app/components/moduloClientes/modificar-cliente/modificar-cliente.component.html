@@ -1,1 +1,46 @@
-<p>modificar-cliente works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+        
+            <div class="row" id="formulario" *ngIf="clienteRegistroOriginal">
+                <form novalidate [formGroup]="formEditarSalon" (ngSubmit)="onGuardarModificacion()">
+                    <h4> Modificar cliente </h4>
+                    <hr>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="apellido">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Mail</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="mail">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="telefono">
+                    </div>
+            
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar modificación de cliente"> 
+                        </div>
+                        <div class="col-2">
+                            <a class="btn btn-primary" routerLink="/listarClientes" id="btnCancelar" role="button">Cancelar</a>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
