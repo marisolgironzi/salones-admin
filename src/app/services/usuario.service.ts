@@ -7,7 +7,7 @@ import { Usuario } from '../interfaces/usuarios';
   providedIn: 'root'
 })
 export class UsuarioService {
-  API: string='localhost/apiSalones/';
+  API: string='https://github.com/marisolgironzi/salones-api';
 
   constructor(
     private conexionservicio:HttpClient
@@ -18,11 +18,11 @@ export class UsuarioService {
   }
 
   agregarUsuario(datosUsuario:Usuario):Observable<any>{
-    return this.conexionservicio.post(this.API+"?insertarUsuario=1",datosUsuario);
+    return this.conexionservicio.put(this.API+"?insertarUsuario=1",datosUsuario);
   }
 
   borrarUsuario(id_usuario:any):Observable<any>{
-    return this.conexionservicio.get(this.API+"?borrarUsuario="+id_usuario);
+    return this.conexionservicio.delete(this.API+"?borrarUsuario="+id_usuario);
   }
 
   modificarUsuario(id_usuario:any, datosUsuario:Usuario):Observable<any>{

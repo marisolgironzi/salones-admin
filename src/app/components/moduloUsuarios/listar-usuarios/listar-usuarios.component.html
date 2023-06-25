@@ -7,6 +7,8 @@
             <div class="row" id="tablaUsuarios">
                 <div class="table-responsive">
                     <h4> Listado de usuario </h4>
+                    <hr>
+                    
                     <table class="table table-primary">
                         <thead>
                             <tr>
@@ -27,8 +29,8 @@
                                 <td>{{ usuario.usuario}}</td>
                                 <td>{{ usuario.contrasenia}}</td>
                                 <td>{{ usuario.categoria}}</td>
-                                <td><a class="btn btn-primary" routerLink="/modificarUsuario/{{ usuario.id_usuario }}" role="button">Editar</a>
-                                    <a class="btn btn-danger" (click)="borrarRegistroUsuario(usuario.id_usuario, iControl)" role="button">Borrar</a></td>
+                                <td><a class="btn modificar" routerLink="/modificarUsuario/{{ usuario.id_usuario }}" role="button">Editar</a>
+                                    <a class="btn borrar" (click)="borrarRegistroUsuario(usuario.id_usuario, iControl)" role="button">Borrar</a></td>
                             </tr>
                         </tbody>
                     </table>

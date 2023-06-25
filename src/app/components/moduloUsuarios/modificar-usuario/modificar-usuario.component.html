@@ -1,1 +1,50 @@
-<p>modificar-usuario works!</p>
+<div class="row" id="principal">
+    <div class="col-3" id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-9" id="contenido">
+        <div class="container-fluid">
+        
+            <div class="row" id="formulario" *ngIf="usuarioRegistroOriginal">
+                <form novalidate [formGroup]="formEditarUsuario" (ngSubmit)="onGuardarModificacion()">
+                    <h4> Modificar usuario </h4>
+                    <hr>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="nombre">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="apellido">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Usuario</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="usuario">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Contraseña</span> 
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="contrasenia">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Categoría</span>
+                        <input required type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="categoria">
+                    </div>
+            
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="button" class="btn btn-primary" id="btnGuardar" value="Guardar modificación de usuario"> 
+                        </div>
+                        <div class="col-2">
+                            <a class="btn btn-primary" routerLink="/listarUsuarios" id="btnCancelar" role="button">Cancelar</a>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

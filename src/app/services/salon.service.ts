@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SalonService {
-  API: string='localhost/apiSalones/';
+  API: string='https://github.com/marisolgironzi/salones-api';
 
   constructor(
     private conexionservicio:HttpClient
